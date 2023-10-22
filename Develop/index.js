@@ -115,9 +115,9 @@ npm i
 
                     packagesOutput = `### NPM Packages\n`;
 
-                    for(let i = 0; i < packages.length; i+=2){
+                    for(let i = 0; i < packages.length; i+=1){
                         // split name from desc
-                        const comp = packages[i].split(' ')
+                        let comp = packages[i].split(' ')
                         let desc = '';
                         for (let f=1;f<comp.length;f++){
                             desc += (comp[f] + ' ')
