@@ -6,18 +6,18 @@
 </h1>
 </div>
 
-#### `README` files can be a tetious task that often gets repetitive and becomes a chore, but what if there was a solution. Now you can `dynamically create` a `professional README` by just running a simple command in node and answering a few questions.
+#### `README` files can be a tetious task that often gets repetitive and becomes a chore, but what if there was a solution. Now you can dynamically `create` a professional `README` by just running a simple command in node and answering a few questions.
 
 ## Getting Started 🌱
 
-Once you `run the index.js file` using
+Once you `run` the index.js file using
 
 ```
 node index.js
 ```
 You will be prompted to answer a variety of questions including your `Github username`, `Title` of the project, or even whether you want to include npm packages in your project or not.
 
-After answering the questions, the file will be created in the Develop folder, and you will recieve a `File Created Successfully` message in the terminal.
+After answering the questions, the file will be created in the Develop folder, and you will recieve a *File Created Successfully* message in the terminal.
 
 If you want to run your own local instance, follow the installation instructions included in this document.
 
