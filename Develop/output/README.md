@@ -1,39 +1,45 @@
 
 <h1 align="center">
-<img src="d" alt="app icon" style="width:50%;"/>
+<img src="https://pbs.twimg.com/profile_images/1605297940242669568/q8-vPggS_400x400.jpg" alt="app icon" style="width:50%;"/>
 </h1>
-<h1 align="center">d</h1>
+<h1 align="center">Title Goes Here</h1>
 
-#### d.
+#### I know what to do.
 
 ## Getting Started 🌱
 
 ### Usage
-d
+instruct me
 
 If you want to run your own local instance, follow the installation instructions included in this document.
 
 
 ### Prerequisites 📂
-No Prerequisites Required.
+You will need `node` installed on your computer in order to run this app.
 
 ### Installation 📁
-No Installation Required.
+Inside your terminal or command prompt, navigate to the location of the cloned repo. Install the necessary dependencies by running - 
+```
+npm i
+```
 
 
-## Testing
-* item
+## Testing 🧪
+* here is the first test
+* here is the second test
 
 
 ## Built With 🌱
 * HTML and CSS
 * [Javascript](https://www.javascript.com/) - programming language
+* [Node.js](https://nodejs.org/en/) - javascript runtime
 
-
+### NPM Packages
+* [inquirer](https://www.npmjs.com/package/inquirer) - cool software app thing 
 
 
 ## Author 🔑
-* **d** - [d](https://github.com/d)
+* **ethancs13** - [ethancs13](https://github.com/ethancs13)
 
 Contributing 🚀
 ------------
@@ -52,7 +58,7 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 MIT License
 
-Copyright (c) 2023 d
+Copyright (c) 2023 ethancs13
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -72,4 +78,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
+## Acknowledgments 🙏
+me myself and I

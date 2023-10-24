@@ -30,6 +30,9 @@ Inside your terminal or command prompt, navigate to the location of the cloned r
 ```
 npm i
 ```
+## Example Usage Video
+[![Watch the video](https://cdnwebsite.databox.com/wp-content/uploads/2019/05/02115706/improve-video-play-rate.png)](./Develop/video/Untitled_%20Oct%2024,%202023%201_50%20PM.mp4)
+
 
 ## Built With 🌱
 * HTML and CSS
