@@ -23,6 +23,11 @@ function init() {
             },
             {
                 type: 'input',
+                message: "Email: ",
+                name: 'email',
+            },
+            {
+                type: 'input',
                 message: 'Title: ',
                 name: 'title',
             },
@@ -47,21 +52,21 @@ function init() {
                 name: 'tests',
             },
             {
-                type: 'input',
-                message: 'Are you using Nodejs? | y-n ',
+                type: 'confirm',
+                message: 'Are you using Nodejs?',
                 name: 'node',
             },
             {
-                type: 'input',
-                message: 'Are you using NPM packages? | y-n ',
+                type: 'confirm',
+                message: 'Are you using NPM packages?',
                 name: 'npm',
-                when: (response) => response.node === 'y',
+                when: (response) => response.node === true,
             },
             {
                 type: 'input',
                 message: `NPM packages: (name desc,name desc)\n`,
                 name: 'packages',
-                when: (response) => response.npm === 'y',
+                when: (response) => response.npm === true,
             },
             {
                 type: 'input',
@@ -77,6 +82,7 @@ function init() {
             
         ])
         .then((userData) => {
+
             let test = userData.tests.split(',')
             let testOutput = ``;
 
@@ -88,7 +94,6 @@ function init() {
             if (userData.src !== ''){
                 src = userData.src
             }
-            let licenseHead = `## Licensing\n`
             let license = ``;
 
             switch(userData.license){
@@ -542,7 +547,7 @@ You should also get your employer (if you work as a programmer) or school, if an
 The GNU General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License. But first, please read <https://www.gnu.org/licenses/why-not-lgpl.html>.`
                     break;
             }
-            
+
             var mentions = "";
             var packagesOutput = "";
             var nodeBuild = "";
@@ -555,7 +560,7 @@ No Prerequisites Required.
 No Installation Required.
 `;
             // Using Nodejs?
-            if (userData.node.toLowerCase() === 'y'){
+            if (userData.node){
                 // setup node in Built With section
                 nodeBuild = `* [Node.js](https://nodejs.org/en/) - javascript runtime`
                 // setup Installation instructions if using Nodejs
@@ -573,7 +578,7 @@ npm i
 
                 // setup packages in readme for NPM
                 
-                if (userData.npm.toLowerCase() === 'y'){
+                if (userData.npm){
                     if (userData.packages.split(' ').length < 2){
                         var packages = [userData.packages]
                     } else {
@@ -601,14 +606,30 @@ npm i
             let filename = 'Develop/output/README.md'
             let output =
 `
+<a name="readme-top" id="readme-top"></a>
+
 <h1 align="center">
 <img src="${src}" alt="app icon" style="width:50%;"/>
 </h1>
 <h1 align="center">${userData.title}</h1>
 
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#testing">Testing</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#mentions">Acknowledgments</a></li>
+  </ol>
+</details>
+
 #### ${userData.desc}.
 
 ## Getting Started 🌱
+<a name="getting-started" id="getting-started"></a>
 
 ### Usage
 ${userData.instructions}
@@ -616,7 +637,9 @@ ${userData.instructions}
 If you want to run your own local instance, follow the installation instructions included in this document.
 
 ${nodeInject}
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="testing" id="testing"></a>
 ## Testing 🧪
 ${testOutput}
 
@@ -627,10 +650,15 @@ ${nodeBuild}
 
 ${packagesOutput}
 
+<a name="contact" id="contact"></a>
+## Questions
+* Contact: [${userData.email}](https://${userData.email})
+
 ## Author 🔑
 * **${userData.name}** - [${userData.name}](https://github.com/${userData.name.split(' ').join('-')})
 
-Contributing 🚀
+<a name="contributing" id="contributing"></a>
+## Contributing 🚀
 ------------
 
 Please refer to each project's style and contribution guidelines for submitting patches and additions. Make sure to follow the "fork-and-pull" Git workflow.
@@ -643,9 +671,11 @@ Please refer to each project's style and contribution guidelines for submitting 
 
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
-${licenseHead}
+<a name="license" id="license"></a>
+## License
 ${license}
 
+<a name="mentions" id="mentions"></a>
 ${mentions}
 `
         writeToFile(filename, output);
