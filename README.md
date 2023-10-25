@@ -36,8 +36,8 @@ npm i
 
 ## Built With 🌱
 * HTML and CSS
-* [Javascript](https://www.javascript.com/) - programming language
-* [Node.js](https://nodejs.org/en/) - javascript runtime
+* [![JavaScript][JavaScript.com]][JavaScript-url] - programming language
+* ![node-current](https://img.shields.io/badge/node-blue?style=for-the-badge&logo=Node&logoColor=blue) - javascript runtime
 
 ### NPM Packages
 * [inquirer](https://www.npmjs.com/package/inquirer) - capture user input  
@@ -50,3 +50,6 @@ npm i
 Brian and Erik
 
 </div>
+
+[JavaScript.com]: https://img.shields.io/badge/JavaScript-blue?style=for-the-badge&logo=Javascript
+[JavaScript-url]: https://www.javascript.com/
