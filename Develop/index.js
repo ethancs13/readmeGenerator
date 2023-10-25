@@ -52,6 +52,12 @@ function init() {
                 name: 'tests',
             },
             {
+                name: "builtWith",
+                type: "checkbox",
+                message: "Choose your technologies:",
+                choices: ['JQuery', 'Tailwind', 'Bootstrap'],
+            },
+            {
                 type: 'confirm',
                 message: 'Are you using Nodejs?',
                 name: 'node',
@@ -559,10 +565,11 @@ No Prerequisites Required.
 ### Installation 📁
 No Installation Required.
 `;
+            
             // Using Nodejs?
             if (userData.node){
                 // setup node in Built With section
-                nodeBuild = `* [Node.js](https://nodejs.org/en/) - javascript runtime`
+                nodeBuild = `* ![node-current](https://img.shields.io/badge/node-blue?style=for-the-badge&logo=Node&logoColor=blue) - javascript runtime\n`
                 // setup Installation instructions if using Nodejs
                 nodeInject = 
 `
@@ -602,6 +609,45 @@ npm i
             if (userData.mentions){
                 mentions = `## Acknowledgments 🙏\n${userData.mentions}`
             }
+
+            var licenseBadge;
+
+            switch(userData.license){
+                case 'MIT':
+                    licenseBadge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+                    break;
+                case 'Apache':
+                    licenseBadge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+                    break;
+                case 'GPL':
+                    licenseBadge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+                    break;
+                default:
+                    licenseBadge = ''
+                    break;
+            }
+
+            var builtWith = ''
+
+            if (userData.builtWith[1]){
+                for(let f = 0; f < userData.builtWith.length; f++){
+
+                    if ((userData.builtWith[f] === 'Bootstrap') || (userData.builtWith[f] === 'Tailwind')){
+                        var desc = ' - CSS framework'
+                    } else if (userData.builtWith[f] === 'JQuery'){
+                        var desc = ' - JS framework'
+                    }
+
+                    builtWith += `* [![${userData.builtWith[f]}][${userData.builtWith[f]}.com]][${userData.builtWith[f]}-url] ${desc}\n`
+                }
+            } else {
+                if ((userData.builtWith[0] === 'Bootstrap') || (userData.builtWith[0] === 'Tailwind')){
+                    var desc = ' - CSS framework'
+                } else if (userData.builtWith[0] === 'JQuery'){
+                    var desc = ' - JS framework'
+                }
+                builtWith += `* [![${userData.builtWith[0]}][${userData.builtWith[0]}.com]][${userData.builtWith[0]}-url]${desc}`
+            }
             
             let filename = 'Develop/output/README.md'
             let output =
@@ -613,6 +659,8 @@ npm i
 </h1>
 <h1 align="center">${userData.title}</h1>
 
+
+${licenseBadge}
 
 <details>
   <summary>Table of Contents</summary>
@@ -628,7 +676,7 @@ npm i
 
 #### ${userData.desc}.
 
-## Getting Started 🌱
+## Getting Started 💡
 <a name="getting-started" id="getting-started"></a>
 
 ### Usage
@@ -645,8 +693,10 @@ ${testOutput}
 
 ## Built With 🌱
 * HTML and CSS
-* [Javascript](https://www.javascript.com/) - programming language
+* [![JavaScript][JavaScript.com]][JavaScript-url] - Programming Language
 ${nodeBuild}
+${builtWith}
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ${packagesOutput}
 
@@ -671,12 +721,25 @@ Please refer to each project's style and contribution guidelines for submitting 
 
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <a name="license" id="license"></a>
 ## License
 ${license}
 
 <a name="mentions" id="mentions"></a>
 ${mentions}
+
+
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com
+[JavaScript.com]: https://img.shields.io/badge/JavaScript-blue?style=for-the-badge&logo=Javascript
+[JavaScript-url]: https://www.javascript.com/
+[Bootstrap.com]: https://img.shields.io/badge/bootstrap-blue?style=for-the-badge&logo=Bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com/
+[Tailwind.com]: https://img.shields.io/badge/tailwind-blue?style=for-the-badge&logo=Tailwind&logoColor=blue
+[Tailwind-url]: https://getbootstrap.com/
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 `
         writeToFile(filename, output);
         });

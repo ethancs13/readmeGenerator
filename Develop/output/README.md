@@ -2,10 +2,12 @@
 <a name="readme-top" id="readme-top"></a>
 
 <h1 align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/2560px-Markdown-mark.svg.png" alt="app icon" style="width:50%;"/>
+<img src="f" alt="app icon" style="width:50%;"/>
 </h1>
-<h1 align="center"></h1>
+<h1 align="center">f</h1>
 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <details>
   <summary>Table of Contents</summary>
@@ -19,48 +21,47 @@
   </ol>
 </details>
 
-#### .
+#### f.
 
 ## Getting Started 🌱
 <a name="getting-started" id="getting-started"></a>
 
 ### Usage
-
+f
 
 If you want to run your own local instance, follow the installation instructions included in this document.
 
 
 ### Prerequisites 📂
-You will need `node` installed on your computer in order to run this app.
+No Prerequisites Required.
 
 ### Installation 📁
-Inside your terminal or command prompt, navigate to the location of the cloned repo. Install the necessary dependencies by running - 
-```
-npm i
-```
+No Installation Required.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="testing" id="testing"></a>
 ## Testing 🧪
-* 
+* f
 
 
 ## Built With 🌱
 * HTML and CSS
-* [Javascript](https://www.javascript.com/) - programming language
-* [Node.js](https://nodejs.org/en/) - javascript runtime
+* [![JavaScript][JavaScript.com]][JavaScript-url] - Programming Language
 
-### NPM Packages
-* [](https://www.npmjs.com/package/) - 
+* [![JQuery][JQuery.com]][JQuery-url]  - JS framework
+* [![Tailwind][Tailwind.com]][Tailwind-url]  - CSS framework
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <a name="contact" id="contact"></a>
 ## Questions
-* Contact: [](https://)
+* Contact: [f](https://f)
 
 ## Author 🔑
-* **** - [](https://github.com/)
+* **f** - [f](https://github.com/f)
 
 <a name="contributing" id="contributing"></a>
 ## Contributing 🚀
@@ -76,11 +77,13 @@ Please refer to each project's style and contribution guidelines for submitting 
 
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <a name="license" id="license"></a>
 ## License
 MIT License
 
-Copyright (c) 2023 
+Copyright (c) 2023 f
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -101,5 +104,15 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 <a name="mentions" id="mentions"></a>
-## Acknowledgments 🙏
-kji
+
+
+
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com
+[JavaScript.com]: https://img.shields.io/badge/JavaScript-blue?style=for-the-badge&logo=Javascript
+[JavaScript-url]: https://www.javascript.com/
+[Bootstrap.com]: https://img.shields.io/badge/bootstrap-blue?style=for-the-badge&logo=Bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com/
+[Tailwind.com]: https://img.shields.io/badge/tailwind-blue?style=for-the-badge&logo=Tailwind&logoColor=blue
+[Tailwind-url]: https://getbootstrap.com/
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
