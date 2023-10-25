@@ -8,7 +8,7 @@
 
 #### `README` files can be a tetious task that often gets repetitive and becomes a chore, but what if there was a solution. Now you can dynamically `create` a professional `README` by just running a simple command in node and answering a few questions.
 
-## Getting Started 🌱
+## Getting Started 💡
 
 Once you `run` the index.js file using
 
