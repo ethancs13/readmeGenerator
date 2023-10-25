@@ -2,15 +2,15 @@
 <a name="readme-top" id="readme-top"></a>
 
 <h1 align="center">
-<img src="f" alt="app icon" style="width:50%;"/>
+<img src="hihuh" alt="app icon" style="width:50%;"/>
 </h1>
-<h1 align="center">f</h1>
+<h1 align="center">h</h1>
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <details>
-  <summary>Table of Contents</summary>
+  <summary style="font-size:24px;">Table of Contents</summary>
   <ol>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#testing">Testing</a></li>
@@ -21,36 +21,41 @@
   </ol>
 </details>
 
-#### f.
+#### hhi.
 
-## Getting Started 🌱
+## Getting Started 💡
 <a name="getting-started" id="getting-started"></a>
 
 ### Usage
-f
+hhi
 
 If you want to run your own local instance, follow the installation instructions included in this document.
 
 
 ### Prerequisites 📂
-No Prerequisites Required.
+You will need `node` installed on your computer in order to run this app.
 
 ### Installation 📁
-No Installation Required.
+Inside your terminal or command prompt, navigate to the location of the cloned repo. Install the necessary dependencies by running - 
+```
+npm i
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="testing" id="testing"></a>
-## Testing 🧪
-* f
+## Testing 🔍
+* 
 
 
 ## Built With 🌱
 * HTML and CSS
 * [![JavaScript][JavaScript.com]][JavaScript-url] - Programming Language
+* ![node-current](https://img.shields.io/badge/node-blue?style=for-the-badge&logo=Node&logoColor=blue) - javascript runtime
 
 * [![JQuery][JQuery.com]][JQuery-url]  - JS framework
 * [![Tailwind][Tailwind.com]][Tailwind-url]  - CSS framework
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]  - CSS framework
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -58,14 +63,13 @@ No Installation Required.
 
 <a name="contact" id="contact"></a>
 ## Questions
-* Contact: [f](https://f)
+* Contact: [h](https://h)
 
 ## Author 🔑
-* **f** - [f](https://github.com/f)
+* **hih** - [hih](https://github.com/hih)
 
 <a name="contributing" id="contributing"></a>
-## Contributing 🚀
-------------
+## Contributing 📌
 
 Please refer to each project's style and contribution guidelines for submitting patches and additions. Make sure to follow the "fork-and-pull" Git workflow.
 
@@ -79,11 +83,16 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<a name="mentions" id="mentions"></a>
+## Acknowledgments 🙏
+hihi
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <a name="license" id="license"></a>
-## License
+## License 🌲
 MIT License
 
-Copyright (c) 2023 f
+Copyright (c) 2023 hih
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -103,7 +112,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-<a name="mentions" id="mentions"></a>
 
 
 

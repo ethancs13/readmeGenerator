@@ -592,22 +592,24 @@ npm i
                         var packages = [...userData.packages.split(',')]
                     }
 
-                    packagesOutput = `### NPM Packages\n`;
+                    if(userData.packages){
+                        packagesOutput = `### NPM Packages\n`;
 
-                    for(let i = 0; i < packages.length; i++){
-                        // split name from desc
-                        let comp = packages[i].split(' ')
-                        let desc = '';
-                        for (let f=1;f<comp.length;f++){
-                            desc += (comp[f] + ' ')
-                        }
-                        packagesOutput += `* [${comp[0]}](https://www.npmjs.com/package/${comp[0]}) - ${desc}\n`
-                    }    
+                        for(let i = 0; i < packages.length; i++){
+                            // split name from desc
+                            let comp = packages[i].split(' ')
+                            let desc = '';
+                            for (let f=1;f<comp.length;f++){
+                                desc += (comp[f] + ' ')
+                            }
+                            packagesOutput += `* [${comp[0]}](https://www.npmjs.com/package/${comp[0]}) - ${desc}\n`
+                        }    
+                    }
                 }
             }
 
             if (userData.mentions){
-                mentions = `## Acknowledgments 🙏\n${userData.mentions}`
+                mentions = `## Acknowledgments 🙏\n${userData.mentions}\n<p align="right">(<a href="#readme-top">back to top</a>)</p>`
             }
 
             var licenseBadge;
@@ -628,26 +630,28 @@ npm i
             }
 
             var builtWith = ''
-
-            if (userData.builtWith[1]){
-                for(let f = 0; f < userData.builtWith.length; f++){
-
-                    if ((userData.builtWith[f] === 'Bootstrap') || (userData.builtWith[f] === 'Tailwind')){
+            if(userData.builtWith) {
+                if (userData.builtWith[1]){
+                    for(let f = 0; f < userData.builtWith.length; f++){
+    
+                        if ((userData.builtWith[f] === 'Bootstrap') || (userData.builtWith[f] === 'Tailwind')){
+                            var desc = ' - CSS framework'
+                        } else if (userData.builtWith[f] === 'JQuery'){
+                            var desc = ' - JS framework'
+                        }
+    
+                        builtWith += `* [![${userData.builtWith[f]}][${userData.builtWith[f]}.com]][${userData.builtWith[f]}-url] ${desc}\n`
+                    }
+                } else {
+                    if ((userData.builtWith[0] === 'Bootstrap') || (userData.builtWith[0] === 'Tailwind')){
                         var desc = ' - CSS framework'
-                    } else if (userData.builtWith[f] === 'JQuery'){
+                    } else if (userData.builtWith[0] === 'JQuery'){
                         var desc = ' - JS framework'
                     }
-
-                    builtWith += `* [![${userData.builtWith[f]}][${userData.builtWith[f]}.com]][${userData.builtWith[f]}-url] ${desc}\n`
+                    builtWith += `* [![${userData.builtWith[0]}][${userData.builtWith[0]}.com]][${userData.builtWith[0]}-url]${desc}`
                 }
-            } else {
-                if ((userData.builtWith[0] === 'Bootstrap') || (userData.builtWith[0] === 'Tailwind')){
-                    var desc = ' - CSS framework'
-                } else if (userData.builtWith[0] === 'JQuery'){
-                    var desc = ' - JS framework'
-                }
-                builtWith += `* [![${userData.builtWith[0]}][${userData.builtWith[0]}.com]][${userData.builtWith[0]}-url]${desc}`
             }
+            
             
             let filename = 'Develop/output/README.md'
             let output =
@@ -663,7 +667,7 @@ npm i
 ${licenseBadge}
 
 <details>
-  <summary>Table of Contents</summary>
+  <summary style="font-size:24px;">Table of Contents</summary>
   <ol>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#testing">Testing</a></li>
@@ -688,7 +692,7 @@ ${nodeInject}
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="testing" id="testing"></a>
-## Testing 🧪
+## Testing 🔍
 ${testOutput}
 
 ## Built With 🌱
@@ -708,8 +712,7 @@ ${packagesOutput}
 * **${userData.name}** - [${userData.name}](https://github.com/${userData.name.split(' ').join('-')})
 
 <a name="contributing" id="contributing"></a>
-## Contributing 🚀
-------------
+## Contributing 📌
 
 Please refer to each project's style and contribution guidelines for submitting patches and additions. Make sure to follow the "fork-and-pull" Git workflow.
 
@@ -723,12 +726,14 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<a name="license" id="license"></a>
-## License
-${license}
-
 <a name="mentions" id="mentions"></a>
 ${mentions}
+
+<a name="license" id="license"></a>
+## License 🌲
+${license}
+
+
 
 
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
