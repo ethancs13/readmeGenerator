@@ -1,4 +1,4 @@
-<div align="center" style="background:white;padding-top:20px;color:black;">
+<div align="center" style="background-color:white;padding-top:20px;color:black;">
 <h1>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/2560px-Markdown-mark.svg.png" alt="app icon" style="width:50%;padding:5px;"/>
 <p style="padding-top:20px;">Readme markdown (RMMD)</p>
