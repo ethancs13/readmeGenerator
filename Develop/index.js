@@ -3,7 +3,78 @@ const inquirer = require('inquirer')
 const fs = require('fs')
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        message: "Github author's username: ",
+        name: 'name',
+    },
+    {
+        type: 'input',
+        message: "Email: ",
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'Title: ',
+        name: 'title',
+    },
+    {
+        type: 'input',
+        message: 'image source: ',
+        name: 'src',
+    },
+    {
+        type: 'input',
+        message: 'Description: ',
+        name: 'desc',
+    },
+    {
+        type: 'input',
+        message: 'Basic Instructions: ',
+        name: 'instructions'
+    },
+    {
+        type: 'input',
+        message: `Tests: (item,item)\n`,
+        name: 'tests',
+    },
+    {
+        name: "builtWith",
+        type: "checkbox",
+        message: "Choose your technologies:",
+        choices: ['JQuery', 'Tailwind', 'Bootstrap'],
+    },
+    {
+        type: 'confirm',
+        message: 'Are you using Nodejs?',
+        name: 'node',
+    },
+    {
+        type: 'confirm',
+        message: 'Are you using NPM packages?',
+        name: 'npm',
+        when: (response) => response.node === true,
+    },
+    {
+        type: 'input',
+        message: `NPM packages: (name desc,name desc)\n`,
+        name: 'packages',
+        when: (response) => response.npm === true,
+    },
+    {
+        type: 'input',
+        message: 'Acknowledgements: ',
+        name: 'mentions',
+    },
+    {
+        type: 'list',
+        message: 'Select License: ',
+        name: 'license',
+        choices: ['MIT', 'Apache', 'GPL']
+    },
+    
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -11,82 +82,26 @@ function writeToFile(fileName, data) {
         err ? console.log(err) : console.log("File Created Successfully.")
     })
 }
+function checkImage(url) {
+    var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    request.send();
+    request.onload = function() {
+      status = request.status;
+      if (request.status == 200) //if(statusText == OK)
+      {
+        return url;
+      } else {
+        return null;
+      }
+    }
+  }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer
-        .prompt([
-            {
-                type: 'input',
-                message: "Github author's username: ",
-                name: 'name',
-            },
-            {
-                type: 'input',
-                message: "Email: ",
-                name: 'email',
-            },
-            {
-                type: 'input',
-                message: 'Title: ',
-                name: 'title',
-            },
-            {
-                type: 'input',
-                message: 'image source: ',
-                name: 'src',
-            },
-            {
-                type: 'input',
-                message: 'Description: ',
-                name: 'desc',
-            },
-            {
-                type: 'input',
-                message: 'Basic Instructions: ',
-                name: 'instructions'
-            },
-            {
-                type: 'input',
-                message: `Tests: (item,item)\n`,
-                name: 'tests',
-            },
-            {
-                name: "builtWith",
-                type: "checkbox",
-                message: "Choose your technologies:",
-                choices: ['JQuery', 'Tailwind', 'Bootstrap'],
-            },
-            {
-                type: 'confirm',
-                message: 'Are you using Nodejs?',
-                name: 'node',
-            },
-            {
-                type: 'confirm',
-                message: 'Are you using NPM packages?',
-                name: 'npm',
-                when: (response) => response.node === true,
-            },
-            {
-                type: 'input',
-                message: `NPM packages: (name desc,name desc)\n`,
-                name: 'packages',
-                when: (response) => response.npm === true,
-            },
-            {
-                type: 'input',
-                message: 'Acknowledgements: ',
-                name: 'mentions',
-            },
-            {
-                type: 'list',
-                message: 'Select License: ',
-                name: 'license',
-                choices: ['MIT', 'Apache', 'GPL']
-            },
-            
-        ])
+        .prompt(questions)
         .then((userData) => {
 
             let test = userData.tests.split(',')
@@ -98,7 +113,9 @@ function init() {
 
             var src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/2560px-Markdown-mark.svg.png'
             if (userData.src !== ''){
-                src = userData.src
+                if (checkImage(src)){
+                    src = userData.src
+                }
             }
             let license = ``;
 
@@ -653,7 +670,7 @@ npm i
             }
             
             
-            let filename = 'Develop/output/README.md'
+            let filename = './output/README.md'
             let output =
 `
 <a name="readme-top" id="readme-top"></a>
@@ -731,7 +748,10 @@ ${mentions}
 
 <a name="license" id="license"></a>
 ## License 🌲
+<details>
+<summary style="font-size:20px;">Full License</summary>
 ${license}
+</details>
 
 
 

@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "8.2.4"
+    "inquirer": "8.2.4",
+    "xmlhttprequest": "^1.8.0"
   }
 }

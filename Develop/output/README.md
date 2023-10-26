@@ -2,9 +2,9 @@
 <a name="readme-top" id="readme-top"></a>
 
 <h1 align="center">
-<img src="hihuh" alt="app icon" style="width:50%;"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/2560px-Markdown-mark.svg.png" alt="app icon" style="width:50%;"/>
 </h1>
-<h1 align="center">h</h1>
+<h1 align="center">k</h1>
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -21,13 +21,13 @@
   </ol>
 </details>
 
-#### hhi.
+#### k.
 
 ## Getting Started 💡
 <a name="getting-started" id="getting-started"></a>
 
 ### Usage
-hhi
+k
 
 If you want to run your own local instance, follow the installation instructions included in this document.
 
@@ -45,7 +45,7 @@ npm i
 
 <a name="testing" id="testing"></a>
 ## Testing 🔍
-* 
+* k
 
 
 ## Built With 🌱
@@ -53,20 +53,17 @@ npm i
 * [![JavaScript][JavaScript.com]][JavaScript-url] - Programming Language
 * ![node-current](https://img.shields.io/badge/node-blue?style=for-the-badge&logo=Node&logoColor=blue) - javascript runtime
 
-* [![JQuery][JQuery.com]][JQuery-url]  - JS framework
-* [![Tailwind][Tailwind.com]][Tailwind-url]  - CSS framework
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]  - CSS framework
-
+* [![undefined][undefined.com]][undefined-url]undefined
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <a name="contact" id="contact"></a>
 ## Questions
-* Contact: [h](https://h)
+* Contact: [k](https://k)
 
 ## Author 🔑
-* **hih** - [hih](https://github.com/hih)
+* **k** - [k](https://github.com/k)
 
 <a name="contributing" id="contributing"></a>
 ## Contributing 📌
@@ -84,15 +81,15 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="mentions" id="mentions"></a>
-## Acknowledgments 🙏
-hihi
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <a name="license" id="license"></a>
 ## License 🌲
+<details>
+<summary style="font-size:20px;">Full License</summary>
 MIT License
 
-Copyright (c) 2023 hih
+Copyright (c) 2023 k
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -111,6 +108,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+</details>
 
 
 
