@@ -4,7 +4,7 @@
 <h1 align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/2560px-Markdown-mark.svg.png" alt="app icon" style="width:50%;"/>
 </h1>
-<h1 align="center">k</h1>
+<h1 align="center">Title Goes Here</h1>
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -21,13 +21,13 @@
   </ol>
 </details>
 
-#### k.
+#### here is my description for my application that doesnt do anything because this is a test.
 
 ## Getting Started 💡
 <a name="getting-started" id="getting-started"></a>
 
 ### Usage
-k
+open index file using ```node index.js``` or ```node Develop/index.js```
 
 If you want to run your own local instance, follow the installation instructions included in this document.
 
@@ -45,7 +45,8 @@ npm i
 
 <a name="testing" id="testing"></a>
 ## Testing 🔍
-* k
+* test one
+* test two
 
 
 ## Built With 🌱
@@ -53,17 +54,22 @@ npm i
 * [![JavaScript][JavaScript.com]][JavaScript-url] - Programming Language
 * ![node-current](https://img.shields.io/badge/node-blue?style=for-the-badge&logo=Node&logoColor=blue) - javascript runtime
 
-* [![undefined][undefined.com]][undefined-url]undefined
+* [![JQuery][JQuery.com]][JQuery-url]  - JS framework
+* [![Tailwind][Tailwind.com]][Tailwind-url]  - CSS framework
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]  - CSS framework
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### NPM Packages
+* [inquirer](https://www.npmjs.com/package/inquirer) - input handler 
 
 
 <a name="contact" id="contact"></a>
 ## Questions
-* Contact: [k](https://k)
+* Contact: [ethansroka@gmail.com](https://ethansroka@gmail.com)
 
 ## Author 🔑
-* **k** - [k](https://github.com/k)
+* **ethancs13** - [ethancs13](https://github.com/ethancs13)
 
 <a name="contributing" id="contributing"></a>
 ## Contributing 📌
@@ -81,7 +87,9 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="mentions" id="mentions"></a>
-
+## Acknowledgments 🙏
+me myself and i
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <a name="license" id="license"></a>
 ## License 🌲
@@ -89,7 +97,7 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 <summary style="font-size:20px;">Full License</summary>
 MIT License
 
-Copyright (c) 2023 k
+Copyright (c) 2023 ethancs13
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
